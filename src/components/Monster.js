@@ -11,10 +11,12 @@ const Monster = ({ monster, onFavouriteToggle }) => {
     const favouriteButtonText = monster.favourite ? "Killed" : "Add to kill list"
 
     return (
-        <>
+        <div class="monster">
             <h3>{monster.name}</h3>
-            <button onClick={handleClick}>{favouriteButtonText}</button>
-        </>
+            <p><button onClick={handleClick}>{favouriteButtonText}</button></p>
+            <img src={monster.image} />
+            <p>{monster.description}</p>
+        </div>
     )
 }
 
